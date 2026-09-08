@@ -1,0 +1,41 @@
+Anotações: Web Development (Aula 1)
+
+Operadores:
+"&&" : Vai ser verdadeira quando as duas condições forem respeitadas.(AND)
+"||" : Vai ser verdadeira quando pelo menos uma condição for respeitada.(OR)
+"!" : Inverte o valor booleano.(NOT)
+
+Exemplos:
+console.log(true && false);  // false (AND)
+console.log(true || false);  // true  (OR)
+console.log(!true);  // false (NOT)
+
+Operadores Ternários:
+O operador ternário permite expressar condicionais simpes em uma linha, retornando um valor caso a condição seja verdadeira e outro caso seja falsa.
+
+Exemplo:
+let idade = 18;
+let status = idade >= 18 ? "Maior de idade" : "Menor de idade";
+
+Coalescência Nula (??):
+Retorna o operando da direita apenas se o da esquerda for{" "} null ou undefined. É diferente de ||, que trataria qualquer valor "falsy" (como 0 ou "") como falso.
+
+Exemplo:
+let valor = null;
+let resultado = valor ?? "Valor padrão"; // "Valor padrão"
+
+Encadeamento Opcional (?.):
+Permite acessar propriedades aninhadas sem causar erros se algum nível for null ou undefined.
+
+Exemplo:
+let usuario = { nome: "Ana" };
+console.log(usuario?.endereco?.rua); // undefined
+
+Operador Spread (...):
+Expande iteráveis (arrays, objetos) em locais onde múltiplos elementos são esperados, útil para clonar ou mesclar dados.
+
+Exemplo:
+let arr1 = [1,2];
+let arr2 = [3,4];
+let combinado = [...arr1, ...arr2]; // [1,2,3,4]
+

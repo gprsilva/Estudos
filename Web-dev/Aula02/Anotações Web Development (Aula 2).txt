@@ -1,0 +1,39 @@
+Anotações: Web Development (Aula 2)
+
+Estruturas Condicionais (if / else):
+
+As estruturas condicionais permitem que o programa execute diferentes blocos de código de acordo com condições específicas. Também é possível alinhar condicionais dentro de outras, embora seja recomendável manter o código claro para facilitar a manutenção.
+
+
+Exemplo:
+let prioridade = 2;
+
+if (prioridade === 1) {
+  console.log("Prioridade Baixa");
+} else if (prioridade === 2) {
+  console.log("Prioridade Média");
+} else if (prioridade === 3) {
+  console.log("Prioridade Alta");
+} else {
+  console.log("Prioridade desconhecida");
+}
+
+
+Switch Case:
+A estrutura switch é útil quando há muitas comparações sobre uma mesma variável. O uso de break é essencial para evitar que a execução "pule" para o próximo caso. Em alguns cenários, porém, aproveita-se a ausência de break para agrupar comportamentos semelhantes (conhecido como fall-through).
+
+Exemplo:
+let diaSemana = new Date().getDay(); // 0: Domingo, 1: Segunda, etc.
+
+switch (diaSemana) {
+  case 0:
+    console.log("Domingo");
+    break;
+  case 1:
+    console.log("Segunda-feira");
+    break;
+  // ...
+  default:
+    console.log("Dia inválido");
+    break;
+}

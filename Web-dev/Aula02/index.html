@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02 - Condiicionais e Loops</title>
+</head>
+<body>
+    <!-- Exercicio 1 - Aula 02 -->
+    <label for="nivelAcesso">Nível de Acesso:</label>
+    <select id="nivelAcesso">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+    <p id="resultado"></p>
+
+    <!-- Exercicio 2 - Aula 02 -->
+    <form id="formNota">
+        <label for="nota">Nota:</label>
+        <input type="number" id="nota" min="0" max="10">
+        <button type="submit">Verificar Nota</button>
+    </form>
+    <p id="resultadoNota"></p>
+
+    <!-- Exercicio 3 - Aula 02 -->
+     <form id = 'formNum'>
+        <label for="num">Número:</label>
+        <input type="number" id="num">
+        <button type="submit">Verificar Número</button>
+    </form>
+    <p id="resultadoNum"></p>
+
+    <!-- Exercicio 4 - Aula 02 -->
+    <form id="formSoma">
+        <label for="soma">Soma:</label>
+        <input type="number" id="soma">
+        <button type="submit">Verificar Soma</button>
+    </form>
+    <p id="resultadoSoma"></p>
+
+    <form id="calculadora">
+        <label for="num1">Primeiro Número:</label>
+        <input type="number" id="num1">
+        <label for="num2">Segundo Número:</label>
+        <input type="number" id="num2">
+        <label for="operacao">Operação:</label>
+        <select id="operacao">
+            <option value="soma">Soma</option>
+            <option value="subtracao">Subtração</option>
+            <option value="multiplicacao">Multiplicação</option>
+            <option value="divisao">Divisão</option>
+        </select>
+        <button type="submit">Calcular</button>
+    </form>
+    <p id="resultadoCalculadora"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
