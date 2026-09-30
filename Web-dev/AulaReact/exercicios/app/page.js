@@ -10,6 +10,9 @@ import {
     CardBody
 } from "./components/Aula01";
 
+
+import {Contador, Relogio, Texto, ToDo} from "./components/Aula02"
+
 const nomes = ["João", "Maria", "Pedro", "Ana", "Carlos"];
 
 const alunos = [
@@ -119,6 +122,41 @@ export default function Home() {
                             <CardBody nomes={contatos}/>
                           </Card>
                         </div>
+                    </section>
+                </div>
+            </section>
+            <section className="mx-auto max-w-6xl px-6 py-10">
+
+                {/* TÍTULO DA AULA */}
+                <div className="mb-8">
+                    <div className="mb-3 inline-flex rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-700">
+                        Aula 02
+                    </div>
+
+                    <h2 className="text-2xl font-bold text-gray-900">
+                        Estados e Hooks Básicos
+                    </h2>
+
+                    <p className="mt-2 text-gray-600">
+                        Exercícios básicos de criação e reutilização de componentes.
+                    </p>
+                </div>
+                <div className="space-y-8">
+                    <section>
+                        <h3 className="mb-3 text-lg font-semibold text-gray-800">01. Contador</h3>
+                        <Contador/>
+                    </section>
+                    <section>
+                        <h3 className="mb-3 text-lg font-semibold text-gray-800">02. Relódio</h3>
+                        <Relogio/>
+                    </section>
+                    <section>
+                        <h3 className="mb-3 text-lg font-semibold text-gray-800">03. Input</h3>
+                        <Texto/>
+                    </section>
+                    <section>
+                        <h3 className="mb-3 text-lg font-semibold text-gray-800">04. Lista To-Do</h3>
+                        <ToDo/>
                     </section>
                 </div>
             </section>

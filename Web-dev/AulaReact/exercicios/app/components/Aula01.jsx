@@ -63,7 +63,7 @@ export function Badge({ tipo = "info", children }) {
 
 export function CardHeader({children}){
     return(
-        <div><h2>{children}</h2></div>
+        <div>{children}</div>
     );
 }
 
