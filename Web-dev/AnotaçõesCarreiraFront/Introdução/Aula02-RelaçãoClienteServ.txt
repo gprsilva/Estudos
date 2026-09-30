@@ -1,0 +1,34 @@
+Aula: Redes e o conceito cliente servidor -----------------------------------------------------
+Tipos de Redes: A aula explica que as redes são classificadas pelo tamanho.
+
+- LAN (Local Area Network): Redes menores, como as de casa ou escritório.
+- MAN (Metropolitan Area Network): Redes de nível de cidade.
+- WAN (Wide Area Network): Redes amplas, como a internet, que conectam continentes.
+Analistas de Infraestrutura: São profissionais especializados em organizar cabos, conexões e junções para viabilizar o acesso à internet em empresas.
+
+Infraestrutura de Cabos Submarinos: A conexão da internet entre lugares é feita por cabos, incluindo cabos submarinos que ligam países e continentes. O site Submarine Cable Map (www.submarinecablemap.com) permite visualizar esses cabos.
+
+Conceito Cliente-Servidor: É a forma como a comunicação acontece na web.
+
+Analogia do Restaurante:
+- Cliente: Somos nós, fazendo um pedido.
+- Garçom: Representa o navegador, que leva nosso pedido (requisição) à cozinha.
+- Cozinha: Representa o servidor, que prepara o pedido e o devolve ao garçom (resposta).
+Na Web: O cliente (nós) acessa o navegador, que envia uma requisição ao servidor. O servidor processa e devolve a resposta ao navegador, que a exibe para nós.
+
+Observando Requisições no DevTools: É possível visualizar as requisições que o navegador faz ao servidor usando a aba "Network" (Rede) nas ferramentas de desenvolvedor (DevTools) do navegador. Ao atualizar uma página, podemos ver a quantidade de requisições e os tipos de arquivos solicitados.
+
+Aula: Como os dados são enviados? -------------------------------------------------------------
+- Tráfego de dados na internet: A aula introduziu o conceito de como os dados se movem na internet, usando a analogia de uma empresa de entregas em uma cidade.
+
+- Problemas e soluções no tráfego de dados: Foram explicados dois problemas principais:
+Quando o "pedido" (dado) é muito grande e precisa ser dividido em partes menores.
+Quando uma "via" (caminho) está bloqueada e uma nova rota precisa ser encontrada.
+
+Agentes da internet no tráfego de dados: A aula correlacionou os problemas e soluções com quatro agentes importantes:
+- TCP/IP: Protocolo que atua como um "tradutor universal" para a comunicação entre máquinas.
+- IP (Internet Protocol): O endereço numérico de cada computador, semelhante às coordenadas de latitude e longitude de um GPS.
+- TCP (Transmission Control Protocol): Responsável por quebrar grandes volumes de dados em pacotes menores para envio e por reuni-los no destino.
+- DNS (Domain Name System): Funciona como uma "agenda" que traduz nomes de domínio (como google.com) em endereços IP.
+- Roteadores: Atuam como um "GPS", indicando o caminho mais rápido para os dados e encontrando novas rotas em caso de bloqueios.
+- Exemplos práticos: A aula usou o exemplo de uma foto pixelada em redes sociais para ilustrar o funcionamento do TCP, mostrando como os pacotes de dados chegam e são montados gradualmente. Também exemplificou a ação do roteador ao encontrar um novo caminho quando um anterior se torna indisponível.

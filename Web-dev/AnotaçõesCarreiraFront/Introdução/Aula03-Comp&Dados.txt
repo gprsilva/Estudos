@@ -1,0 +1,42 @@
+Aula: Como computadores representam informações?-----------------------------------------------
+A história dos computadores: A aula começou explorando o ENIAC, o primeiro computador eletrônico, que era muito grande e funcionava com cerca de 18 mil válvulas.
+
+Funcionamento das válvulas: As válvulas interpretavam impulsos elétricos, acendendo ou apagando, e a sequência desses impulsos era entendida como informação.
+
+Evolução para componentes eletrônicos: Com o tempo, as válvulas foram substituídas por componentes menores, como os transistores, que funcionam como disjuntores, transmitindo impulsos elétricos.
+
+Código binário: No fundo, tudo se resume a impulsos elétricos. Quando há um impulso, o computador interpreta como 1; quando não há, interpreta como 0. Isso é o código binário.
+
+Representação de informações: Com apenas 0 e 1, o computador consegue formar sequências para representar letras, cores, cliques e outras informações, de forma semelhante ao código Morse.
+
+Exemplos de código binário: A letra "A" é representada por uma sequência de oito números (01000001), uma cor por outra sequência (11001100), e um clique por uma sequência mais longa.
+
+Aula: Entendendo bits, bytes e múltiplos-------------------------------------------------------
+Representação Binária: O computador interpreta informações como impulsos elétricos, que são representados por 0s e 1s. Grupos desses 0s e 1s são necessários para formar informações compreensíveis.
+
+Bits: Um bit é a menor unidade de informação computacional, representando um único 0 ou 1.
+
+Bytes: Um byte é um grupo de oito bits. Com um byte, o computador pode ter 256 combinações possíveis, o que permite representar informações como números decimais (de 1 a 9), letras do alfabeto, cores simples e símbolos básicos.
+
+Múltiplos de Bytes: Existem unidades maiores para medir informações, que são múltiplos de 1.024:
+1 Kilobyte (KB) = 1.024 bytes
+1 Megabyte (MB) = 1.024 Kilobytes
+1 Gigabyte (GB) = 1.024 Megabytes
+1 Terabyte (TB) = 1.024 Gigabytes
+
+Comparação de Tamanhos: Para ter uma ideia prática, uma mensagem de texto tem cerca de 1 KB, uma foto pode ter de 2 a 3 MB, uma música de 2 a 6 MB, e um filme de 1 a 4 GB. Memórias de dispositivos, como celulares, são frequentemente medidas em Gigabytes.
+
+Transformação de Dados: A aula introduz a ideia de que, ao digitarmos letras e números, eles são transformados em 0s e 1s para que o computador possa entendê-los. O próximo passo é entender como essa transformação acontece.
+
+Aula: O que são linguagens de programação?-----------------------------------------------------
+Comunicação com o computador: O computador entende apenas zeros e uns (código binário). Escrever diretamente em binário é inviável para humanos.
+
+Linguagens de Programação: Foram criadas para atuar como tradutores, permitindo que escrevamos de forma mais natural para nós e traduzindo para o código binário que o computador entende.
+
+Tradução do Código: A tradução do código pode ocorrer em dois momentos:
+- Interpretação: A tradução acontece no momento em que o programa é executado. O tradutor é chamado de interpretador. Navegadores web, por exemplo, atuam como interpretadores.
+- Compilação: A tradução ocorre antes de o programa ser executado. O tradutor é chamado de compilador. Aplicativos para celular ou computador são compilados.
+
+Diferença entre Interpretador e Compilador:
+- Interpretador: Executa os comandos sequencialmente, um por um, assim que os recebe.
+- Compilador: Revisa todo o código antes de executar, verificando se está tudo correto e sem erros, para depois iniciar a execução.

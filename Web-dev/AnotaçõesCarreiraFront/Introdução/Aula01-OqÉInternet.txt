@@ -1,0 +1,47 @@
+O que é a internet ?
+- Origem da Internet: A internet surgiu de uma necessidade de guerra, especificamente durante a Guerra Fria.
+
+- Contexto da Guerra Fria: Foi uma "guerra intelectual" entre os Estados Unidos e a União Soviética, focada na corrida por conhecimento e tecnologia.
+
+- Problema da Centralização: Os Estados Unidos concentravam informações cruciais em um único local (sistema centralizado), o que representava um grande risco em caso de ataque.
+
+- Necessidade de Descentralização: Para evitar a perda total de informações em um ataque, surgiu a necessidade de distribuir os dados em locais diversos.
+
+- Criação da DARPA: Os Estados Unidos criaram a DARPA (agência de defesa para pesquisa avançada) com o objetivo de explorar a descentralização.
+
+- Experimento ARPANET: A DARPA realizou o primeiro experimento de rede de computadores, chamado ARPANET, ainda no contexto da guerra.
+
+ARPANET:
+- Contexto de Surgimento: A Arpanet nasceu em um cenário de Guerra Fria, impulsionada pelo lançamento do satélite Sputnik pela União Soviética, o que gerou um alerta nos Estados Unidos e acelerou o desenvolvimento de redes de comunicação.
+
+- Primeiras Conexões: A DARPA (Agência de Projetos de Pesquisa Avançada de Defesa) iniciou a conexão de universidades. As quatro primeiras foram UCLA, Stanford, UCSB e Utah, em 1969.
+
+- Desafio da Comunicação: A tentativa inicial de comunicação entre computadores de diferentes universidades (como SDS-9 e IBM 370) foi desafiadora. A primeira tentativa de enviar a palavra "login" falhou na letra "G", mas serviu como base para o desenvolvimento futuro.
+Evolução e Expansão:
+1969: 4 nós (universidades).
+1971: 15 nós.
+1973: 35 nós, com a primeira internacionalização (Reino Unido e Noruega).
+1977: Mais de 100 nós.
+
+- Diversificação do Uso: A rede deixou de ser exclusiva para militares, sendo adotada por universidades para pesquisa e por empresas para uso comercial.
+
+- Divisão da Rede: Em 1983, devido ao grande número de usuários e à dificuldade de gestão, a Arpanet foi dividida em:
+MILNET: Para uso militar.
+NSFNET: Para pesquisa acadêmica.
+
+- Desafio da Interoperabilidade: A aula destacou a complexidade de comunicar computadores de diferentes marcas (como PDP, DEC e Nova) na rede de 1977.
+
+TCP-IP:
+- ARPANET e o desafio da comunicação: A ARPANET era uma rede extensa com muitos computadores de marcas diferentes. O grande desafio era fazer com que todos se comunicassem.
+
+- Protocolo NCP e suas limitações: Inicialmente, a ARPANET usava o protocolo NCP, que era instável e não permitia a comunicação com outras redes. Ele funcionava como um "tradutor de uma única língua" e exigia que outros computadores ficassem inativos durante uma comunicação, tornando o sistema pouco escalável.
+
+- O surgimento do TCP/IP: Vinton Cerf e Bob Kahn desenvolveram o protocolo TCP/IP para resolver os problemas do NCP, criando um "tradutor universal" que permitiu a comunicação entre todas as redes e computadores.
+
+- Nascimento da Internet: Em 1983, com o TCP/IP, a internet nasceu oficialmente. A ARPANET foi desativada em 1990.
+
+- Internet discada: Nos anos 90 e 2000, a internet discada utilizava a infraestrutura da linha telefônica para conexão, aproveitando a economia de custo e tempo.
+
+- Evolução para banda larga e Wi-Fi: Posteriormente, a internet evoluiu para a banda larga, com infraestrutura separada, e depois para os roteadores Wi-Fi, que eliminaram a necessidade de conexão direta por cabo telefônico.
+
+- Redes móveis: A evolução mais recente são as redes móveis, que permitem acesso à internet de qualquer lugar.

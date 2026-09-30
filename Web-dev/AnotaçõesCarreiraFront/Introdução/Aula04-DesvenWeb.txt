@@ -1,0 +1,29 @@
+Aula: Evolução dos sites, do HTML cru aos sites modernos---------------------------------------
+Evolução das páginas web nos anos 90: A aula começou explicando como as páginas web eram nos anos 90, comparando-as a documentos simples do Word, com texto corrido e links, sem muita organização visual.
+
+Evolução até os anos 2000: Foi demonstrado que, com o tempo, as páginas evoluíram, como o exemplo da Apple em 1997, que já apresentava mais organização, colunas, blocos de texto, pequenas imagens e cores.
+
+Linguagens principais da web: A aula introduziu as três linguagens fundamentais para o desenvolvimento web:
+- HTML (Hypertext Markup Language): Responsável pela estrutura da página, definindo o que é um título, um texto, um link, uma imagem, etc.
+- CSS (Cascading Style Sheets): Responsável pela aparência visual da página, como cores, alinhamento, tamanho de elementos.
+- JavaScript: Responsável por trazer dinamismo e interatividade para os sites, permitindo ações como carrosséis de imagens ou a mudança de informações ao clicar em botões.
+
+Exemplo prático com o site da Alura: Para ilustrar o papel de cada linguagem, a aula utilizou o site da Alura, mostrando como ele se comportaria sem CSS (apenas estrutura, sem estilo) e sem JavaScript (sem interatividade, como a mudança de preços ou a abertura de seções de dúvidas).
+
+Aula: A web 2.0 e redes sociais----------------------------------------------------------------
+Web 1.0 - A Web da Informação (anos 90):
+- Foco principal: facilitar o acesso a informações já existentes.
+- Experiência: páginas com muitos textos, links para outras páginas de texto.
+- Características: poucas imagens ou cores, conteúdo pouco dinâmico, publicação restrita a organizações ou usuários específicos.
+- Objetivo: consumir informação.
+
+Transição para a Web 2.0:
+Novas necessidades: as pessoas queriam se expressar e interagir, não apenas ler.
+Marco: mudança de comportamento e surgimento de novas tecnologias.
+
+Web 2.0 - A Web Social (anos 2000 em diante):
+- Blogs: Surgimento dos primeiros blogs e do WordPress, permitindo que qualquer pessoa publicasse conteúdo (inicialmente textos, depois fotos).
+- YouTube: Possibilidade de assistir e, posteriormente, publicar vídeos.
+- Redes Sociais: Criação de redes de amigos virtuais (como o Orkut), com compartilhamento de interesses, comunidades, curtidas e comentários.
+- Impacto: Não apenas uma mudança de comportamento, mas também uma transformação na estrutura dos sites e na capacidade das linguagens de programação (HTML, CSS, JavaScript) para suportar experiências mais ricas.
+- Importância: A Web 2.0 é a base da web que utilizamos hoje.
