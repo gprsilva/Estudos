@@ -154,3 +154,73 @@ export function ToDo(){
         </div>
     )
 }
+
+export function Timer(){
+    const [segundos, setSegundos] = useState(0);
+    const [rodando, setRodando] = useState(false);
+
+    useEffect(() => {
+        let id;
+        if (rodando){
+            id = setInterval(()=>{
+                setSegundos(prev => prev + 1)
+            }, 1000)
+        }
+        return () => {
+            clearInterval(id);
+        }
+    })
+
+    return(
+        <div className="flex flex-col items-center gap-4 rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+            <h2 className="text-2xl font-bold text-gray-800">Segundos: {segundos}</h2>
+            <button onClick={() => setRodando(prev => !prev)}
+                className={`rounded-lg px-5 py-2 text-lg font-bold text-white transition ${rodando ? 'bg-red-500 hover:bg-red-600' : 'bg-green-500 hover:bg-green-600'}`}>
+                {rodando ? 'Parar' : 'Iniciar'}
+            </button>
+            <button onClick={() => setSegundos(0)}
+                className="rounded-lg bg-gray-500 px-5 py-2 text-lg font-bold text-white transition hover:bg-gray-600">
+                Resetar</button>    
+        </div>
+    )
+}
+
+export function Switcher(){
+const [tema, setTema] = useState('light')
+
+useEffect(() => {
+    const salvo = localStorage.getItem('tema')
+    if (salvo) {
+        setTema(salvo)
+    }
+}, [])
+
+useEffect(() => {
+    document.body.classList.toggle('dark', tema === 'dark')
+    localStorage.setItem('tema', tema)
+    return () => {
+        document.body.classList.remove('dark')
+    }
+}, [tema])
+
+
+return (
+    <div className="flex items-center gap-4 rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+        <span className="font-medium text-gray-700">
+            Tema: {tema === 'light' ? 'Claro' : 'Escuro'}
+        </span>
+
+        <button
+            onClick={() => setTema(prev => prev === 'light' ? 'dark' : 'light')}
+            className={`rounded-lg px-5 py-2 text-lg font-bold text-white transition ${
+                tema === 'light'
+                    ? 'bg-green-500 hover:bg-green-600'
+                    : 'bg-red-500 hover:bg-red-600'
+            }`}
+        >
+            {tema === 'light' ? 'Claro' : 'Escuro'}
+        </button>
+    </div>
+)
+
+}
