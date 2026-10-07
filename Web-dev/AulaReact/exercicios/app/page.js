@@ -11,7 +11,7 @@ import {
 } from "./components/Aula01";
 
 
-import {Contador, Relogio, Texto, ToDo, Timer, Switcher} from "./components/Aula02"
+import {Contador, Relogio, Texto, ToDo, Timer, Switcher, Api} from "./components/Aula02"
 
 const nomes = ["João", "Maria", "Pedro", "Ana", "Carlos"];
 
@@ -165,6 +165,10 @@ export default function Home() {
                     <section>
                         <h3 className="mb-3 text-lg font-semibold text-gray-800">06. Switcher</h3>
                         <Switcher/>
+                    </section>
+                    <section>
+                        <h3 className="mb-3 text-lg font-semibold text-gray-800">07. API</h3>
+                        <Api/>
                     </section>
                 </div>
             </section>

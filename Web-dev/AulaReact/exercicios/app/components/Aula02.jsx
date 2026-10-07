@@ -186,41 +186,68 @@ export function Timer(){
 }
 
 export function Switcher(){
-const [tema, setTema] = useState('light')
+    const [tema, setTema] = useState('light')
 
-useEffect(() => {
-    const salvo = localStorage.getItem('tema')
-    if (salvo) {
-        setTema(salvo)
+    useEffect(() => {
+        const salvo = localStorage.getItem('tema')
+        if (salvo) {
+            setTema(salvo)
+        }
+    }, [])
+
+    useEffect(() => {
+        document.body.classList.toggle('dark', tema === 'dark')
+        localStorage.setItem('tema', tema)
+        return () => {
+            document.body.classList.remove('dark')
+        }
+    }, [tema])
+
+
+    return (
+        <div className="flex items-center gap-4 rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+            <span className="font-medium text-gray-700">
+                Tema: {tema === 'light' ? 'Claro' : 'Escuro'}
+            </span>
+
+            <button
+                onClick={() => setTema(prev => prev === 'light' ? 'dark' : 'light')}
+                className={`rounded-lg px-5 py-2 text-lg font-bold text-white transition ${
+                    tema === 'light'
+                        ? 'bg-green-500 hover:bg-green-600'
+                        : 'bg-red-500 hover:bg-red-600'
+                }`}
+            >
+                {tema === 'light' ? 'Claro' : 'Escuro'}
+            </button>
+        </div>
+    )
+
+}
+
+export function Api(){
+    const [dados, setDados] = useState([]);
+    const [carregando, setCarregando] = useState(true);
+    const [erro, setErro] = useState(null);
+
+    useEffect(() => {
+        let isMounted = true;
+        fetch("https://jsonplaceholder.typicode.com/users")
+            .then(r => r.json())
+            .then(json => { if (isMounted) {setDados(json);setCarregando(false)}})
+            .catch(erro => { if (isMounted) {setErro(erro.message);setCarregando(false)}});
+    }, [])
+
+    if (carregando) {
+        return <p>Carregando...</p>;
     }
-}, [])
-
-useEffect(() => {
-    document.body.classList.toggle('dark', tema === 'dark')
-    localStorage.setItem('tema', tema)
-    return () => {
-        document.body.classList.remove('dark')
+    if (erro) {
+        return <p>Erro: {erro}</p>;
     }
-}, [tema])
 
-
-return (
-    <div className="flex items-center gap-4 rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-        <span className="font-medium text-gray-700">
-            Tema: {tema === 'light' ? 'Claro' : 'Escuro'}
-        </span>
-
-        <button
-            onClick={() => setTema(prev => prev === 'light' ? 'dark' : 'light')}
-            className={`rounded-lg px-5 py-2 text-lg font-bold text-white transition ${
-                tema === 'light'
-                    ? 'bg-green-500 hover:bg-green-600'
-                    : 'bg-red-500 hover:bg-red-600'
-            }`}
-        >
-            {tema === 'light' ? 'Claro' : 'Escuro'}
-        </button>
-    </div>
-)
-
+    return (
+        <div className="flex flex-col items-center gap-4 rounded-xl border border-gray-200 bg-white p-6 shadow-sm space-y-2">
+            {dados.map((d) => (<div className="flex items-center gap-3 rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 w-full" key={d.id}>{d.name}</div>))}
+        </div>
+    );
 }
