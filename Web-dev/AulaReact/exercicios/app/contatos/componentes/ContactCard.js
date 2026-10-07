@@ -16,11 +16,9 @@ const ContactCard = ({ contato, onDelete }) => {
 
     
 
-    return (
-        
+    return (       
         <div className="group rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg">
             <div className="flex items-center gap-4">
-
                 {/* Avatar */}
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-100 text-lg font-bold text-blue-600">
                     <img src={avatarUrl} alt={`Avatar de ${contato.nome}`} className="h-12 w-12 rounded-full" />
@@ -29,7 +27,6 @@ const ContactCard = ({ contato, onDelete }) => {
                 <Link href={detailUrl} className="min-w-0">
                     <h3 className="truncate text-lg font-semibold text-gray-900">{contato.nome}</h3>
                 </Link>
-
             </div>
 
             <div className="mt-5 space-y-3">
@@ -44,7 +41,6 @@ const ContactCard = ({ contato, onDelete }) => {
 
                     <p className="mt-0.5 text-sm font-medium text-gray-700">{contato.telefone}</p>
                 </div>
-
             </div>
 
             {/* Ações */}
@@ -54,9 +50,7 @@ const ContactCard = ({ contato, onDelete }) => {
                 >
                     Excluir contato
                 </button>
-
             </div>
-
         </div>
     );
 };
