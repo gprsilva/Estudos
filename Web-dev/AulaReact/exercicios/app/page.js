@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import {
     Card,
     ListaItens,
@@ -37,21 +39,37 @@ export default function Home() {
 
     return (
         <main className="min-h-screen bg-gray-50">
+            <header className="border-b border-gray-200 bg-white shadow-sm">
+                <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
 
-            {/* HEADER */}
-            <header className="border-b border-gray-200 bg-white">
-                <div className="mx-auto max-w-6xl px-6 py-8">
-                    <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-blue-600">
-                        Caderno de Estudos
-                    </p>
+                    <div>
+                        <p className="mb-1 text-xs font-bold uppercase tracking-[0.2em] text-blue-600">
+                            Caderno de Estudos
+                        </p>
 
-                    <h1 className="text-3xl font-bold text-gray-900">
-                        React + Next.js
-                    </h1>
+                        <h1 className="text-2xl font-bold tracking-tight text-gray-900">
+                            React + Next.js
+                        </h1>
 
-                    <p className="mt-2 text-gray-600">
-                        Exercícios práticos da apostila
-                    </p>
+                        <p className="mt-1 text-sm text-gray-500">
+                            Exercícios práticos da apostila
+                        </p>
+                    </div>
+
+                    <nav className="flex items-center gap-2 rounded-xl bg-gray-100 p-1">
+                        <Link href="/"
+                            className="rounded-lg px-4 py-2 text-sm font-medium text-gray-600 transition-all duration-200 hover:bg-white hover:text-blue-600 hover:shadow-sm"
+                        >
+                            Exercícios
+                        </Link>
+
+                        <Link href="/contatos"
+                            className="rounded-lg px-4 py-2 text-sm font-medium text-gray-600 transition-all duration-200 hover:bg-white hover:text-blue-600 hover:shadow-sm"
+                        >
+                            Contatos
+                        </Link>
+                    </nav>
+
                 </div>
             </header>
 
@@ -170,6 +188,26 @@ export default function Home() {
                         <h3 className="mb-3 text-lg font-semibold text-gray-800">07. API</h3>
                         <Api/>
                     </section>
+                </div>
+            </section>
+            <section className="mx-auto max-w-6xl px-6 py-10">
+
+                {/* TÍTULO DA AULA */}
+                <div className="mb-8">
+                    <div className="mb-3 inline-flex rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-700">
+                        Aula 03
+                    </div>
+
+                    <h2 className="text-2xl font-bold text-gray-900">
+                        Componentização Avançada na Prática
+                    </h2>
+
+                    <p className="mt-2 text-gray-600">
+                        Exercícios básicos de criação e reutilização de componentes.
+                    </p>
+                </div>
+                <div className="space-y-8">
+                    
                 </div>
             </section>
         </main>

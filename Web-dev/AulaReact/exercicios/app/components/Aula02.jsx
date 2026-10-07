@@ -90,6 +90,11 @@ export function ToDo(){
         setTexto('')
     }
 
+    function handleDelete(id) {
+        setLista(prev => prev.filter(item => item.id !== id));
+        
+    }
+
     function AlternarTarefa(id) {
         setLista(prev =>
             prev.map(item =>
@@ -147,6 +152,9 @@ export function ToDo(){
                             >
                                 {item.texto}
                             </span>
+                            <button onClick={() => handleDelete(item.id)} className="rounded-md bg-red-500 px-3 py-1.5 text-sm font-medium text-white transition hover:bg-red-600">
+                                Excluir
+                            </button>
                         </div>
                     ))}
                 </div>
