@@ -68,6 +68,12 @@ export default function Home() {
                         >
                             Contatos
                         </Link>
+
+                        <Link href="/contatosLS"
+                            className="rounded-lg px-4 py-2 text-sm font-medium text-gray-600 transition-all duration-200 hover:bg-white hover:text-blue-600 hover:shadow-sm"
+                        >
+                            Contatos LS
+                        </Link>
                     </nav>
 
                 </div>

@@ -1,28 +1,42 @@
 "use client";
 
 import Link from "next/link";
-
 import {useState, useEffect} from "react";
 
 import ContactForm from "./componentes/ContactForm";
 import ContactList from "./componentes/ContactList";
 
+
+
 export default function Home() {
-    const[ contatos , setcontatos ] = useState([])
-    const[ carregando , setCarregando] = useState(true)
-    const[ erro , setErro] = useState(null)
-   
+    const[ contatos , setcontatos ] = useState([])//Seta o estado inicial do array de contatos como vazio
+    const[ carregando , setCarregando] = useState(true)//Seta o estado inicial do carregamento como verdadeiro
+    const[ erro , setErro] = useState("")//Seta o estado inicial do erro como vazio
+    const[ searchTerm , setSearchTerm] = useState("")//Seta o estado inicial do termo de pesquisa como vazio
+
+    useEffect(()=>{
+        const contatosLS = localStorage.getItem("contatos");//Recupera os contatos do localStorage
+        if(contatosLS){
+            setcontatos(JSON.parse(contatosLS)) //Faz a conversão de volta para objeto JavaScript
+        }
+        setCarregando(false)
+    },[]);
+
+    useEffect(()=>{
+        if(!carregando){
+            localStorage.setItem("contatos", JSON.stringify(contatos))//Faz a conversão para string JSON para armazenar no localStorage
+        }},[contatos, carregando]); //Estipula que o efeito será executado sempre que houver alterações no array de contatos ou no estado de carregamento
+
 
     const handleAddContact = (contact) => {
-        setcontatos((prevContatos) => [...prevContatos, contact]);
+        setcontatos((prevContatos) => [...prevContatos, contact]);//Adiciona o novo contato ao array de contatos
         console.log("Contato adicionado:", contatos);
     }
 
     const handleDeleteContact = (id) => {
-        setcontatos((prevContatos) => prevContatos.filter((contato) => contato.id !== id));
+        setcontatos((prevContatos) => prevContatos.filter((contato) => contato.id !== id));//Remove o contato com o id correspondente do array de contatos 
         console.log("Contato excluído:", id);
     }
-
 
     return (
         <main className="min-h-screen bg-gray-50">
@@ -66,16 +80,15 @@ export default function Home() {
                     </nav>
                 </div>
             </header>
-            <section className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-10"> 
-                
+            <section className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-10">
                 <div className="flex justify-center">
                     <ContactForm onAddContact={handleAddContact} />
                 </div>
-                
-                <div className="w-full"> 
-                    <ContactList contatos={contatos} onDeleteContact={handleDeleteContact} /> 
+                <div className="flex justify-center">
+                    <ContactList contatos={contatos} searchTerm={searchTerm} onSearchChange={setSearchTerm} onDeleteContact={handleDeleteContact} carregando={carregando} />
                 </div>
             </section>
         </main>
-    );
+    )
+
 }
